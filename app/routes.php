@@ -10,6 +10,7 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', array('as' => 'home' , 'uses' => 'ShowController@Home'));
 
 //Kullanıcının register ve logini için gönderilern api key kontrolu
 Route::group(array('prefix' => 'api/v1', 'before' => 'user.login'), function()

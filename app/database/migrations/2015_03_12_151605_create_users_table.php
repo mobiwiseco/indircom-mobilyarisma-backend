@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration {
 			$table->bigInteger('user_auth_id');
 			$table->string('name', 100);
 			$table->string('surname', 100);
+			$table->string('email',60);
 			$table->string('token',60);
 			$table->date('created_at');
 			$table->date('updated_at');			

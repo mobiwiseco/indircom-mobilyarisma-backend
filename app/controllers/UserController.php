@@ -24,10 +24,20 @@ class UserController extends BaseController {
 								);	
 			}
 
+			if(Input::get('email') != null)
+			{
+				$email = Input::get('email');
+			}
+			else
+			{
+				$email = "";
+			}
+
 			$user = new User;
 			$user->user_auth_id = $user_auth_id;
 			$user->name = $name;
 			$user->surname = $surname;
+			$user->email = $email;
 			$user->token = str_random(60);;
 			$user->created_at = date('Y-m-d H:i:s');
 			$user->updated_at = date('Y-m-d H:i:s');
